@@ -7,7 +7,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "cart_user")
-public class User {
+public class CartUser {
 
 	@Id
 	private String account;
