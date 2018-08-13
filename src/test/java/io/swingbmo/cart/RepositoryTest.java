@@ -1,8 +1,10 @@
 package io.swingbmo.cart;
 
-import static org.junit.Assert.*;
-import io.swingbmo.cart.model.User;
-import io.swingbmo.cart.repo.UserRepository;
+import static org.junit.Assert.assertFalse;
+import io.swingbmo.cart.model.CartInfo;
+import io.swingbmo.cart.model.CartUser;
+import io.swingbmo.cart.repo.CartInfoRepository;
+import io.swingbmo.cart.repo.CartUserRepository;
 
 import java.util.List;
 
@@ -18,14 +20,23 @@ import org.springframework.util.StringUtils;
 public class RepositoryTest {
 
 	@Autowired
-	private UserRepository userRepo;
+	private CartUserRepository userRepo;
+	@Autowired
+	private CartInfoRepository cartInfoRepo;
 	
 	@Test
-	public void testJpa() {
-		List<User> userlist = userRepo.findAll();
+	public void testUserRepo() {
+		List<CartUser> userlist = userRepo.findAll();
 		assertFalse(StringUtils.isEmpty(userlist));
 		System.out.println("============");
 		userlist.forEach( x -> System.out.println(x.getAccount()));
+	}
+	
+	@Test
+	public void testCartInfoRepo() {
+		List<CartInfo> cartInfolist = cartInfoRepo.findAll();
+		assertFalse(StringUtils.isEmpty(cartInfolist));
 		System.out.println("============");
+		cartInfolist.forEach( x -> System.out.println(x.getTitle()));
 	}
 }
