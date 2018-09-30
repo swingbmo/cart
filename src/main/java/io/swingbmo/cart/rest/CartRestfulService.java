@@ -5,9 +5,33 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class CartRestfulService {
-	
+
 	@GetMapping("/test")
-	public String test() {
-		return "hello spring boot!";
+	public ReturnObj test() {
+		ReturnObj o = new ReturnObj();
+		o.setCode("000");
+		o.setMsg("success");
+		return o;
+	}
+
+	class ReturnObj {
+		private String msg;
+		private String code;
+
+		public String getMsg() {
+			return msg;
+		}
+
+		public void setMsg(String msg) {
+			this.msg = msg;
+		}
+
+		public String getCode() {
+			return code;
+		}
+
+		public void setCode(String code) {
+			this.code = code;
+		}
 	}
 }
