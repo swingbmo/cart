@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, "微軟正黑體";
+}
+a:hover {
+  color: #369;
+}
+a {
+  text-decoration:none;
+  transition: all 0.2s;
+}
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+div {
+  display: flex;
+}
+.nav-top {
+  color: white;
+  background-color: black;
+  justify-content: space-between;
+}
+.nav-top-tools {
+  margin-right: 24px;
+}
+.nav-top-tools a{
+  font-weight: bold;
+  font-size: 0.8em;
+  padding: 5px;
+  margin-left: 8px;
+}
+.nav-top-tools a:hover{
+  background-color: #ddd;
+  border-radius: 4px;
+}
+.nav-bottom {
+  background-color: #CED0BE;
+  justify-content: space-between;
+  padding: 10px 60px;
+}
+.nav-bottom-menu a {
+  font-weight: bold;
+  font-size:0.9em;
+  padding: 10px 20px;
+}
+.nav-bottom {
+  align-items: center;
+}
+.nav-bottom-brand a{
+  font-family: Courier New;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+body {
+  background-color: gray;
+  height: 2000px;
+  padding:0;
+  margin:0;
+}
+.nav-wrapper {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+}
+.jumbo {
+  margin-top:66px;
+  width: 100%;
+}
+.footer-wrapper {
+  font-size: 0.8em;
+  justify-content: space-between;
+  padding: 20px 50px;
+  width: 100%;
+  background-color: #aaa;
+}
+.social-icons img{
+  width: 40px;
+  height: 40px;
+}
+i {
+  padding: 0 4px 0 0;
+}
+#products{
+  position: relative;
+}
+
+.products-detail {
+  display: none;
+  position: absolute;
+  width: 120px;
+  top:30px;
+  left: 20px;
+  background-color: #eee;
+  box-shadow: 4px 4px 8px rgba(0,0 ,0,0.3);
+  flex-direction: column;
+  padding: 0 10px;
+}
+.products-detail.opened {
+  display: flex;
+}
+
+.products-detail a:not(:last-child){
+ border-bottom: 1px solid #000;
+}
+
+#bars {
+  display: none;
+}
+.bars-detail a{
+  padding: 5px 0;
+}
+.bars-detail {
+  display:none;
+  position: absolute;
+  top:100%;
+  left:0;
+  width: 100%;
+  background-color: rgba(100,100,100,0.2);
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width:640px)
+{
+  .nav-bottom{
+    padding: 10px 16px;
+  }
+.nav-bottom-menu{
+    display:none;
+  }
+  #bars {
+  display: flex;
+  }
+  .bars-detail.opened {
+    display: flex;
+  }
+}
+
+

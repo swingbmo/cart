@@ -25,12 +25,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.authorizeRequests().antMatchers("/").permitAll().anyRequest()
-				.authenticated().and().formLogin() 
-				// .loginPage("/login") // comment it for getting a default login page
-				.permitAll().and().logout() // use post "/logout"
-				.permitAll();
-		
+		http.authorizeRequests().antMatchers("/","/static/**").permitAll();
+				//.antMatchers("/admin/**").hasRole("ADMIN").anyRequest()
+				//.authenticated().and().formLogin().permitAll()
+				//.and().logout().permitAll();
 	}
 
 	@Bean
@@ -39,14 +37,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		return new InMemoryUserDetailsManager(buildAdminUserDetails());
 	}
 
-	//build userdetail from database admin data
+	// build userdetail from database admin data
 	private List<UserDetails> buildAdminUserDetails() {
-		return adminRepo
+		List<UserDetails> ds = adminRepo
 				.findAll()
 				.stream()
 				.map(x -> User.withDefaultPasswordEncoder()
 						.username(x.getAccount()).password(x.getPassword())
 						.roles("ADMIN").build()).collect(Collectors.toList());
+		ds.add(User.withDefaultPasswordEncoder()
+						.username("aaa").password("123")
+						.roles("USER").build());
+		return ds;
 	}
-
 }
