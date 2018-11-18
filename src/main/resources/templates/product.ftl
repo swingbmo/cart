@@ -4,13 +4,16 @@
 <body>
 	<#include "/libs/nav.ftl">
 	<#include "/libs/jumbo.ftl">
+	
+	
 	<div class="product-shelf">
+	
+		<#list products as product>  
 	    <div class="product-container">
-	      <img src="https://s4.lativ.com.tw/i/Waterfall//38194_560_181116_TW.jpg">
+	      <img src="${product.image.main}">
 	    </div>
-	    <div class="product-container">
-	      <img src="https://s4.lativ.com.tw/i/Waterfall//37812_560_181115_4_TW.jpg">
-	    </div>
+	    </#list>  
+	    
 	</div>
 	<#include "/libs/foot.ftl">
 </body>

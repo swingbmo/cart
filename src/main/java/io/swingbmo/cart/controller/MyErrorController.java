@@ -27,6 +27,11 @@ public class MyErrorController implements ErrorController {
 				model.addAttribute("errorMsg", "INTERNAL SERVER ERROR");
 				model.addAttribute("title", "INTERNAL SERVER ERROR");
 			}
+			else {
+				model.addAttribute("title", "OTHER ERROR");
+				model.addAttribute("errorMsg", "OTHER ERROR");
+
+			}
 		}		
 		
 		return "errorPage";

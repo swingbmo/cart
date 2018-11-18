@@ -18,5 +18,19 @@ CREATE TABLE cart_info (
 	id INTEGER auto_increment primary key,
 	title VARCHAR(25) not null,
 	desc VARCHAR(100),
-	footerdesc VARCHAR(100)
+	footer_desc VARCHAR(100),
+	is_active VARCHAR(1)
+);
+-- product
+CREATE TABLE IMAGE (
+	id INTEGER auto_increment primary key,
+	main VARCHAR(255),
+);
+CREATE TABLE product (
+	id INTEGER auto_increment primary key,
+	title VARCHAR(25) not null,
+	desc VARCHAR(100),
+	price INTEGER null,
+	is_active VARCHAR(1),
+	fk_image_id VARCHAR(255) REFERENCES image(id)
 );

@@ -16,8 +16,16 @@ public class CartInfo {
 	@Column
 	private String desc;
 	@Column
-	private String footerdesc;
+	private String footerDesc;
+	@Column
+	private String isActive;
 	
+	public String getIsActive() {
+		return isActive;
+	}
+	public void setIsActive(String isActive) {
+		this.isActive = isActive;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -36,10 +44,10 @@ public class CartInfo {
 	public void setDesc(String desc) {
 		this.desc = desc;
 	}
-	public String getFooterdesc() {
-		return footerdesc;
+	public String getFooterDesc() {
+		return footerDesc;
 	}
-	public void setFooterdesc(String footerDesc) {
-		this.footerdesc = footerDesc;
+	public void setFooterDesc(String footerDesc) {
+		this.footerDesc = footerDesc;
 	}
 }

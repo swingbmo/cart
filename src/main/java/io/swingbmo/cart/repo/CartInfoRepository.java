@@ -1,9 +1,12 @@
 package io.swingbmo.cart.repo;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import io.swingbmo.cart.model.CartInfo;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CartInfoRepository extends JpaRepository<CartInfo, Integer>{
 
+	List<CartInfo> findByIsActive(String isActive);
 }
