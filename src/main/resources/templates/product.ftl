@@ -6,10 +6,10 @@
 	<#include "/libs/jumbo.ftl">
 	<div class="product-shelf">
 	    <div class="product-container">
-	      <img src="https://shoplineimg.com/56d7f02ae37ec6ca27000059/5b04dda38d1db9c83e001b8a/1200x.webp?source_format=jpg">
+	      <img src="https://s4.lativ.com.tw/i/Waterfall//38194_560_181116_TW.jpg">
 	    </div>
 	    <div class="product-container">
-	      <img src="https://shoplineimg.com/56d7f02ae37ec6ca27000059/5b04ddd059d524197a0002a3/1200x.webp?source_format=jpg">
+	      <img src="https://s4.lativ.com.tw/i/Waterfall//37812_560_181115_4_TW.jpg">
 	    </div>
 	</div>
 	<#include "/libs/foot.ftl">
