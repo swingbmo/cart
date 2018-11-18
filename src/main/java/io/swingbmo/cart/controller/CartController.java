@@ -22,5 +22,10 @@ public class CartController {
 		return "catg";
 	}
 	
+	@GetMapping("/product")
+	public String product(Model model) {
+		model.addAttribute("title", "Products");
+		return "product";
+	}
 
 }

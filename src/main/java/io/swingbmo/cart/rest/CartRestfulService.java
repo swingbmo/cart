@@ -14,6 +14,12 @@ public class CartRestfulService {
 		return o;
 	}
 
+	@GetMapping("/admin/hello")
+	public String hello() {
+		return "hello";
+
+	}
+
 	class ReturnObj {
 		private String msg;
 		private String code;

@@ -8,6 +8,7 @@ a:hover {
 a {
   text-decoration:none;
   transition: all 0.2s;
+  color: black;
 }
 a:visited {
     text-decoration: none;
@@ -26,6 +27,7 @@ div {
   margin-right: 24px;
 }
 .nav-top-tools a{
+	color: white;
   font-weight: bold;
   font-size: 0.8em;
   padding: 5px;
@@ -55,7 +57,7 @@ div {
 }
 
 body {
-  background-color: gray;
+  background-color: #f1eee7;
   height: 2000px;
   padding:0;
   margin:0;
@@ -124,6 +126,20 @@ i {
   align-items: center;
 }
 
+
+.product-shelf {
+  justify-content: space-around;
+  padding: 20px 0px;
+}
+.product-container {
+   flex-direction: column;
+  width: 40%;
+  box-shadow: 0px 0px 30px #ccc;
+}
+.product-container img {
+  width: 100%;
+}
+
 @media screen and (max-width:640px)
 {
   .nav-bottom{
@@ -138,6 +154,15 @@ i {
   .bars-detail.opened {
     display: flex;
   }
+    .product-shelf {
+  flex-direction: column;
+    align-items: center;    
+  }
+  .product-shelf .product-container{
+     margin: 15px 0px;
+     width: 80%;
+  }
+  
 }
 
 
